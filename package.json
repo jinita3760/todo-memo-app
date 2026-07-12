@@ -1,0 +1,21 @@
+{
+  "name": "todo-memo-app",
+  "version": "1.0.0",
+  "description": "할일 메모장 - 캘린더 기반 일정관리 앱",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "todo",
+    "memo",
+    "calendar",
+    "schedule"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mkcert": "^3.2.0"
+  }
+}

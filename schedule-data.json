@@ -1,0 +1,78 @@
+{
+  "list-today": [
+    {
+      "text": "블랙박스 회사에 전화해서 메모리 교체 문의하기",
+      "done": false
+    },
+    {
+      "text": "경찰서에 교통사고 진행상황 문의하기",
+      "done": false
+    },
+    {
+      "text": "신방동 집 벽선반 설치",
+      "done": false
+    },
+    {
+      "text": "7/19~23 신방동 집 - 타공, 완성사진 찍기",
+      "done": false
+    },
+    {
+      "text": "준비물 챙기기: 망치, 샌딩기, 샌딩페이퍼, 목공본드, 플래그십 톱, 천사포, 실리콘, 실리콘건, 실리콘 헤라, 도구박스",
+      "done": false
+    }
+  ],
+  "list-week": [],
+  "list-later": [
+    {
+      "text": "7/20 신방동 관리비 정산 이메일 보내고 전화하기",
+      "done": false
+    },
+    {
+      "text": "7/20 신방동 도시가스 검침 예약하기",
+      "done": false
+    },
+    {
+      "text": "목다보 가져오기",
+      "done": false
+    },
+    {
+      "text": "음봉 가스쿡탑 실리콘 쏘기",
+      "done": false
+    },
+    {
+      "text": "대리석 상판 받침 재단해서 가져오기 (사이즈는 메모장 참고)",
+      "done": false
+    },
+    {
+      "text": "래너 가져오기",
+      "done": false
+    },
+    {
+      "text": "이름표 찾기",
+      "done": false
+    },
+    {
+      "text": "싱크대 젠다이 알아보기",
+      "done": false
+    }
+  ],
+  "list-repeat": [],
+  "list-done": [
+    {
+      "text": "벽선반 스테인 마저 칠하기",
+      "done": true
+    },
+    {
+      "text": "쿡탑 스탠드 호스 라인 타공하기",
+      "done": true
+    },
+    {
+      "text": "월넓 스테인 찾기",
+      "done": true
+    },
+    {
+      "text": "한의원 예약하기",
+      "done": true
+    }
+  ]
+}

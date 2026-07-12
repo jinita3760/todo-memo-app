@@ -1,0 +1,18 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-code": {
+      "source": "github",
+      "repo": "anthropics/claude-code",
+      "path": ".claude-plugin/marketplace.json"
+    },
+    "ECC": {
+      "source": "github",
+      "repo": "affaan-m/ECC",
+      "path": ".claude-plugin/marketplace.json"
+    }
+  },
+  "enabledPlugins": {
+    "*@claude-code": true,
+    "ecc@everything-claude-code": true
+  }
+}
