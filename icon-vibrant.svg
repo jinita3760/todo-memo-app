@@ -1,0 +1,110 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 배경 그래디언트 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA726;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42A5F5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 카드 그래디언트 -->
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F5F7FA;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 체크박스 1 그래디언트 (파란색) -->
+    <linearGradient id="check1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 체크박스 2 그래디언트 (보라색) -->
+    <linearGradient id="check2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#AB47BC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B1FA2;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 체크박스 3 그래디언트 (분홍색) -->
+    <linearGradient id="check3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E91E63;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 그림자 필터 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-opacity="0.2" flood-color="#000000"/>
+    </filter>
+
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="512" height="512" fill="url(#mainGradient)"/>
+
+  <!-- 상단 장식 원형 -->
+  <circle cx="80" cy="80" r="60" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="450" cy="100" r="70" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- 메인 카드 -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="80" width="432" height="360" rx="60" fill="url(#cardGradient)"/>
+  </g>
+
+  <!-- 첫번째 항목 (파란색 체크) -->
+  <g>
+    <!-- 배경 원 -->
+    <circle cx="95" cy="155" r="40" fill="url(#check1)" opacity="0.15"/>
+
+    <!-- 체크박스 -->
+    <rect x="65" y="125" width="60" height="60" rx="14" fill="url(#check1)" filter="url(#innerShadow)"/>
+
+    <!-- 체크 표시 (흰색) -->
+    <g stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 80 160 L 90 170 L 110 145"/>
+    </g>
+
+    <!-- 텍스트 라인들 -->
+    <rect x="155" y="140" width="260" height="8" rx="4" fill="url(#check1)" opacity="0.15"/>
+    <rect x="155" y="158" width="180" height="6" rx="3" fill="url(#check1)" opacity="0.1"/>
+  </g>
+
+  <!-- 두번째 항목 (보라색 체크) -->
+  <g>
+    <!-- 배경 원 -->
+    <circle cx="95" cy="255" r="40" fill="url(#check2)" opacity="0.15"/>
+
+    <!-- 체크박스 -->
+    <rect x="65" y="225" width="60" height="60" rx="14" fill="url(#check2)" filter="url(#innerShadow)"/>
+
+    <!-- 체크 표시 (흰색) -->
+    <g stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 80 260 L 90 270 L 110 245"/>
+    </g>
+
+    <!-- 텍스트 라인들 -->
+    <rect x="155" y="240" width="260" height="8" rx="4" fill="url(#check2)" opacity="0.15"/>
+    <rect x="155" y="258" width="180" height="6" rx="3" fill="url(#check2)" opacity="0.1"/>
+  </g>
+
+  <!-- 세번째 항목 (분홍색 - 미체크) -->
+  <g>
+    <!-- 배경 원 -->
+    <circle cx="95" cy="355" r="40" fill="url(#check3)" opacity="0.15"/>
+
+    <!-- 체크박스 (테두리만) -->
+    <rect x="65" y="325" width="60" height="60" rx="14" fill="none" stroke="url(#check3)" stroke-width="3"/>
+
+    <!-- 텍스트 라인들 -->
+    <rect x="155" y="340" width="260" height="8" rx="4" fill="url(#check3)" opacity="0.15"/>
+    <rect x="155" y="358" width="180" height="6" rx="3" fill="url(#check3)" opacity="0.1"/>
+  </g>
+
+  <!-- 하단 장식선 -->
+  <rect x="60" y="415" width="392" height="3" rx="1.5" fill="url(#mainGradient)" opacity="0.2"/>
+
+  <!-- 우측 하단 장식 원형 -->
+  <circle cx="490" cy="420" r="50" fill="rgba(255,255,255,0.12)"/>
+</svg>
