@@ -1,7 +1,7 @@
 // 오프라인에서도 앱 화면(껍데기)이 열리도록 하는 최소 서비스 워커.
 // 일정 데이터(/api/schedule)는 항상 네트워크에서 최신 상태로 가져오고,
 // 앱의 정적 파일만 캐싱해서 오프라인일 때도 앱은 열리게 한다.
-const CACHE_NAME = 'memo-calendar-shell-v2';
+const CACHE_NAME = 'memo-calendar-shell-v3';
 const SHELL_FILES = [
   './',
   './index.html',
