@@ -8,13 +8,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="할일 메모장">
 <meta name="theme-color" content="#4a90d9">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="icon" href="icons/icon-192.png">
 <title>할 일 메모장 · 캘린더</title>
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js"></script>
 <style>
   @font-face {
     font-family: 'Gmarket Sans';
@@ -1129,19 +1129,14 @@
     });
   });
 
-  // ---- 초기화: 로컬 캐시 먼저 그리고, 원격 데이터로 동기화 ----
-  loadFromLocalStorage();
-  render();
+  // ---- 초기화: 원격 데이터 먼저 로드, 실패하면 로컬 캐시 사용 ----
   fetchRemote(false).then(() => {
-    setInterval(() => fetchRemote(true), 20000);
+    setInterval(() => fetchRemote(true), 3000);
+  }).catch(() => {
+    loadFromLocalStorage();
+    render();
+    setInterval(() => fetchRemote(true), 3000);
   });
-
-  // ---- 서비스 워커 등록 (https 또는 localhost) ----
-  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js').catch(() => {});
-    });
-  }
 
   // ---- 앱 설치 프롬프트 처리 ----
   let deferredPrompt;
