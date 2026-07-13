@@ -497,25 +497,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/korean-lunar-calendar/dist/korean-lunar-calendar.min.js"></script>
 <script>
-  // ♻️ Live Reload (개발용) - 파일 변경 감지해서 자동 새로고침
-  let lastReloadTime = Date.now();
-  setInterval(async () => {
-    try {
-      const res = await fetch('/api/reload-check', {
-        headers: { 'x-last-reload': lastReloadTime.toString() }
-      });
-      const data = await res.json();
-      if (data.shouldReload) {
-        console.log('♻️ 파일이 변경되었습니다. 자동 새로고침합니다...');
-        lastReloadTime = data.lastChange;
-        location.reload();
-      }
-    } catch (e) {
-      // 네트워크 오류는 무시
-    }
-  }, 1000); // 1초마다 확인
-</script>
-<script>
   /* SEED_START */
   const seed = {
     'list-today': [
